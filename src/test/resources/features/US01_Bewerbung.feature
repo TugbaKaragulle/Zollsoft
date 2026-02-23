@@ -5,7 +5,7 @@ Feature: Bewerbung über die Homepage von Zollsoft
     Given Der Benutzer geht zur Startseite
     And Entfernt das Cookies-Banner
 
-  @Bewerbung
+  @Bewerbung @E2E
   Scenario: Job suchen und Bewerbung starten
     When Der Benutzer klickt nacheinander auf folgende Produkte, um die Details zu prüfen:
       | intellimago    |
