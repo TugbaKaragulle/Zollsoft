@@ -1,0 +1,20 @@
+2026-02-23 19:22:00 [main] INFO  zollsoft.pages.Homepage - Produkt 'tomedo.air' wurde erfolgreich angeklickt.
+2026-02-23 19:22:04 [main] INFO  zollsoft.pages.Homepage - Button 'Meine Karriere' wurde angeklickt.
+2026-02-23 19:22:22 [main] INFO  zollsoft.pages.JobsKarrierePage - Bereich 'Qualitätssicherung' wurde erfolgreich ausgewählt.
+2026-02-23 19:22:22 [main] INFO  zollsoft.pages.JobsKarrierePage - Prüfe Sichtbarkeit für Job-Titel: 'Softwaretester'
+2026-02-23 19:22:30 [main] INFO  zollsoft.pages.JobsKarrierePage - Erfolg: Job-Titel 'Softwaretester' wurde angeklickt.
+2026-02-23 19:22:33 [main] INFO  zollsoft.pages.JobsKarrierePage - 'Jetzt bewerben' Button wurde geklickt.
+2026-02-23 19:22:34 [main] INFO  zollsoft.pages.BewerbungsFormularPage - Geschlecht ausgewählt.
+2026-02-23 19:22:34 [main] INFO  zollsoft.pages.BewerbungsFormularPage - Akademischer Grad ausgewählt.
+2026-02-23 19:22:34 [main] INFO  zollsoft.pages.BewerbungsFormularPage - Vorname eingegeben.
+2026-02-23 19:22:35 [main] INFO  zollsoft.pages.BewerbungsFormularPage - Nachname eingegeben.
+2026-02-23 19:22:35 [main] INFO  zollsoft.pages.BewerbungsFormularPage - Email eingegeben.
+2026-02-23 19:22:35 [main] INFO  zollsoft.pages.BewerbungsFormularPage - Telefonnummer eingegeben.
+2026-02-23 19:22:35 [main] INFO  zollsoft.pages.BewerbungsFormularPage - Startdatum eingegeben.
+2026-02-23 19:22:35 [main] INFO  zollsoft.pages.BewerbungsFormularPage - Gehaltsvorstellung eingegeben.
+2026-02-23 19:22:36 [main] INFO  zollsoft.pages.BewerbungsFormularPage - Deutschkenntnisse ausgewählt.
+2026-02-23 19:22:36 [main] INFO  zollsoft.pages.BewerbungsFormularPage - Kanal ausgewählt.
+2026-02-23 19:22:37 [main] INFO  zollsoft.pages.BewerbungsFormularPage - Lebenslauf (CV) erfolgreich hochgeladen.
+2026-02-23 19:22:38 [main] INFO  zollsoft.pages.BewerbungsFormularPage - Anderes Dokument erfolgreich hochgeladen.
+2026-02-23 19:22:38 [main] INFO  zollsoft.pages.BewerbungsFormularPage - Bewerbungsformular wurde erfolgreich und vollständig ausgefüllt.
+2026-02-23 19:22:38 [main] INFO  zollsoft.pages.BewerbungsFormularPage - Senden-Button ist aktiv und klickbar.
