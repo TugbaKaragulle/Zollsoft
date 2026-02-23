@@ -61,7 +61,7 @@ public class Homepage {
         try {
             JavascriptUtils.seiteLangsamNachUntenScrollen(driver,14);
             ReusableMethods.waitForElementToBeClickable(driver, meineKarriereButton, 10);
-            ReusableMethods.clickElement(meineKarriereButton);
+            ReusableMethods.clickElementByJS(meineKarriereButton);
             log.info("Button 'Meine Karriere' wurde angeklickt.");
         } catch (Exception e) {
             log.error("Button 'Meine Karriere' konnte nicht geklickt werden.", e);
