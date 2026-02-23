@@ -15,7 +15,6 @@ import zollsoft.utilities.ReusableMethods;
 
 public class BewerbungsFormularPage {
 
-
     private WebDriver driver = Driver.getDriver();
     private static final Logger log = LogManager.getLogger(BewerbungsFormularPage.class);
     private Faker faker = new Faker();
