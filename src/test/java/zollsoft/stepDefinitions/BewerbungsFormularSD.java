@@ -17,7 +17,6 @@ AllPages allPages = new AllPages();
     @Then("Prüft, ob die Schaltfläche zum Absenden klickbar ist")
     public void prüft_ob_die_schaltfläche_zum_absenden_klickbar_ist() {
         Assert.assertTrue(allPages.getBewerbungsFormularPage().isSendButtonClickable());
-
     }
 
 }
