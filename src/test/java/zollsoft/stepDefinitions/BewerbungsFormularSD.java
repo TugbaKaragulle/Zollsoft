@@ -20,7 +20,4 @@ AllPages allPages = new AllPages();
 
     }
 
-
-
-
 }
