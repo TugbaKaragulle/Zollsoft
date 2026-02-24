@@ -10,7 +10,6 @@ import io.cucumber.testng.CucumberOptions;
         tags = "@Bewerbung",
         plugin = {
                 "html:target/reports/html_report.html",
-                "json:target/reports/json_report.json",
                 "rerun:target/failed_tests/failed_scenarios.txt",
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
                 "pretty"},
