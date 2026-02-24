@@ -35,7 +35,6 @@ public class BewerbungsFormularPage {
     private By germanSkills = By.xpath("//select[@name='custom_attribute_3356837']");
     private By kanaele = By.xpath("//select[@name='custom_attribute_668354']");
     private By hiddenInput = By.xpath("(//input[@type='file'])[1]");
-   // private By hiddenInputOther = By.xpath("(//input[@type='file'])[2]");
     private By sendApplication = By.xpath("//button[@type='submit']");
 
     // Methods

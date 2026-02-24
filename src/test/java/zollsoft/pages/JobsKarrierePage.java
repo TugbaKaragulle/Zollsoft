@@ -22,10 +22,12 @@ public class JobsKarrierePage {
     }
 
     // Elemente
+
     private By jetztBewerben = By.xpath("(//a[.='Jetzt bewerben'])[1]");
 
 
     // Methods
+
     public By getJobTitelLocator(String job) {
         return By.xpath(String.format("//a[contains(text(),'%s')]", job));
     }
@@ -33,7 +35,6 @@ public class JobsKarrierePage {
     public void klickQualitaetssicherung(String bereich) { // 'Qualitätssicherung' -> 'Qualitaetssicherung'
         try {
             JavascriptUtils.seiteLangsamNachUntenScrollen(driver,33);
-            ReusableMethods.waitForSeconds(1);
             JavascriptUtils.seiteLangsamNachObenScrollen(driver,45);
 
             By bereichBy = By.xpath("//li[@class='cat-title']/a[contains(text(), '" + bereich + "')]");
@@ -53,14 +54,13 @@ public class JobsKarrierePage {
             log.info("Prüfe Sichtbarkeit für Job-Titel: '{}'", jobTitelName);
             JavascriptUtils.seiteLangsamNachObenScrollen(driver,20);
             JavascriptUtils.scrollToVisibleElement(driver,getJobTitelLocator(jobTitelName));
-            ReusableMethods.waitForSeconds(3);
             ReusableMethods.waitForElementToBeClickable(driver,getJobTitelLocator(jobTitelName),10);
 
             if (!driver.findElements(getJobTitelLocator(jobTitelName)).isEmpty()) {
                 changeBackgroundColorByJS(getJobTitelLocator(jobTitelName),"yellow");
                 ReusableMethods.clickElement(getJobTitelLocator(jobTitelName));
                 log.info("Erfolg: Job-Titel '{}' wurde angeklickt.", jobTitelName);
-                ReusableMethods.waitForSeconds(1);
+                //ReusableMethods.waitForSeconds(1);
 
             } else {
                 log.warn("Warnung: Job-Titel '{}' wurde nicht gefunden.", jobTitelName);
@@ -75,7 +75,6 @@ public class JobsKarrierePage {
     public void klickJetztBewerben() {
         try {
             ReusableMethods.waitForElementToBeClickable(driver, jetztBewerben, 10);
-            ReusableMethods.waitForSeconds(2);
             changeBackgroundColorByJS(jetztBewerben,"yellow");
             ReusableMethods.clickElement(jetztBewerben);
             log.info("'Jetzt bewerben' Button wurde geklickt.");

@@ -23,10 +23,7 @@ public class Homepage {
 
     // Elemente
     private By cookies = By.xpath("//button[contains(@class, 'accept-only-essential')]");
-    private By unsereProdukteTitel = By.xpath("//div[contains(@class, 'et_pb_text_25')]");
     private By meineKarriereButton = By.xpath("//a[@class='et_pb_button et_pb_button_3 karriere-button et_pb_bg_layout_light']");
-    private By zurInitiativbewerbung = By.cssSelector("a.initiativbewerbung");
-    private By alleBereicheTitel = By.xpath("//a[@*='alle']"); // 'alleBreicheTitel' yazım hatası düzeltildi
 
     // Methods
     public void removeCookies() {
@@ -37,8 +34,6 @@ public class Homepage {
             log.warn("Cookie-Banner nicht gefunden oder bereits geschlossen.");
         }
     }
-
-
 
     public void klickeNacheinanderAufProdukte(List<String> produktListe) {
         JavascriptUtils.seiteLangsamNachUntenScrollen(driver,14);
@@ -68,6 +63,7 @@ public class Homepage {
             Assert.fail("Karriere-Button nicht klickbar.");
         }
     }
+
 
 }
 
