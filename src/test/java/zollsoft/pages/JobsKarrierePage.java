@@ -22,12 +22,10 @@ public class JobsKarrierePage {
     }
 
     // Elemente
-
     private By jetztBewerben = By.xpath("(//a[.='Jetzt bewerben'])[1]");
 
 
     // Methods
-
     public By getJobTitelLocator(String job) {
         return By.xpath(String.format("//a[contains(text(),'%s')]", job));
     }
@@ -35,8 +33,8 @@ public class JobsKarrierePage {
     public void klickQualitaetssicherung(String bereich) { // 'Qualitätssicherung' -> 'Qualitaetssicherung'
         try {
             JavascriptUtils.seiteLangsamNachUntenScrollen(driver,33);
+            ReusableMethods.waitForSeconds(1);
             JavascriptUtils.seiteLangsamNachObenScrollen(driver,45);
-
             By bereichBy = By.xpath("//li[@class='cat-title']/a[contains(text(), '" + bereich + "')]");
             ReusableMethods.waitForElementToBeClickable(driver, bereichBy, 10);
             changeBackgroundColorByJS(bereichBy,"yellow");
@@ -60,7 +58,6 @@ public class JobsKarrierePage {
                 changeBackgroundColorByJS(getJobTitelLocator(jobTitelName),"yellow");
                 ReusableMethods.clickElement(getJobTitelLocator(jobTitelName));
                 log.info("Erfolg: Job-Titel '{}' wurde angeklickt.", jobTitelName);
-                //ReusableMethods.waitForSeconds(1);
 
             } else {
                 log.warn("Warnung: Job-Titel '{}' wurde nicht gefunden.", jobTitelName);

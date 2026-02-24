@@ -128,7 +128,6 @@ public class BewerbungsFormularPage {
             String filePath = System.getProperty("user.dir") + "/zollsoft.docx";
             WebElement fileInput = ReusableMethods.waitForElementToBePrecense(driver, hiddenInput,10);
             fileInput.sendKeys(filePath);
-            ReusableMethods.waitForSeconds(1);
             log.info("Lebenslauf (CV) erfolgreich hochgeladen.");
         } catch (Exception e) {
             log.error("Fehler beim Hochladen des Lebenslaufs: ", e);
@@ -141,7 +140,6 @@ public class BewerbungsFormularPage {
             String filePath = System.getProperty("user.dir") + "/Dummy Dokument.docx";
             WebElement fileInput = ReusableMethods.waitForElementToBePrecense(driver,hiddenInput,10);
             fileInput.sendKeys(filePath);
-            ReusableMethods.waitForSeconds(1);
             log.info("Anderes Dokument erfolgreich hochgeladen.");
         } catch (Exception e) {
             log.warn("Zweites Dokument (Other) konnte nicht hochgeladen werden.", e);
