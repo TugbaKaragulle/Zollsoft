@@ -12,6 +12,21 @@ import static zollsoft.utilities.Driver.getDriver;
 
 public class ReusableMethods {
 
+    public static boolean waitForVisibilityOfTitle(String string) {
+        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
+        return wait.until(ExpectedConditions.titleContains(string));
+    }
+
+    public static WebElement waitForElementToBeClickable(WebDriver driver, By by, int timeoutSeconds) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutSeconds));
+        return wait.until(ExpectedConditions.elementToBeClickable(by));
+    }
+
+    public static WebElement waitForElementToBePrecense(WebDriver driver, By by, int timeoutSeconds) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutSeconds));
+        return wait.until(ExpectedConditions.presenceOfElementLocated(by));
+    }
+
     public static void clickElement(By by) {
         getDriver().findElement(by).click();
     }
@@ -51,20 +66,6 @@ public class ReusableMethods {
         }
     }
 
-    public static boolean waitForVisibilityOfTitle(String string) {
-        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
-        return wait.until(ExpectedConditions.titleContains(string));
-    }
-
-    public static WebElement waitForElementToBeClickable(WebDriver driver, By by, int timeoutSeconds) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutSeconds));
-        return wait.until(ExpectedConditions.elementToBeClickable(by));
-    }
-
-    public static WebElement waitForElementToBePrecense(WebDriver driver, By by, int timeoutSeconds) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutSeconds));
-        return wait.until(ExpectedConditions.presenceOfElementLocated(by));
-    }
 
 
 }

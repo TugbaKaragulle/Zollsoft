@@ -3,14 +3,10 @@ package zollsoft.utilities;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.time.Duration;
-
 import static zollsoft.utilities.Driver.getDriver;
 
-
 public class JavascriptUtils {
-
 
     public static void clickElementByJS(By by) {
         WebElement element = getDriver().findElement(by);
