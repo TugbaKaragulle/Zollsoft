@@ -16,7 +16,6 @@ public class ReusableMethods {
         getDriver().findElement(by).click();
     }
 
-
     public static void clickElementByJS(By by) {
         WebElement element = getDriver().findElement(by);
         JavascriptUtils.clickElementByJS(by);
@@ -34,7 +33,7 @@ public class ReusableMethods {
         return getDriver().findElement(by);
     }
 
-    public static List<WebElement>    visibilityOfElements(By by){
+    public static List<WebElement> visibilityOfElements(By by){
         return getDriver().findElements(by);
     }
 
